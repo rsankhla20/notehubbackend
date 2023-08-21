@@ -13,9 +13,11 @@ module.exports.userVerification = async (req, res) => {
       return res.json({ status: false });
     } else {
       const user = await User.findById(data.id);
-      const notes = await Note.find({ userId: user._id });
-      console.log(user);
-      console.log(notes);
+      const notes = await Note.find({ userId: user.id });
+      //console.log(user);
+      console.log(user.id);
+      // console.log(notes);
+      //console.log(notes._id);
       if (user) return res.json({ status: true, user: user, note: notes });
       else return res.json({ status: false });
     }
