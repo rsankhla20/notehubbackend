@@ -17,7 +17,7 @@ mongoose
 
 app.use(
   cors({
-    origin: [`${FRONTEND_LINK}`],
+    origin: ["https://notehub-n9bp.onrender.com"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
