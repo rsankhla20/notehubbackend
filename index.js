@@ -17,12 +17,12 @@ mongoose
 
 app.use(
   cors({
-    origin: ["https://notehub-app.onrender.com", "*"],
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
-
+// ["https://notehub-app.onrender.com", "*"]
 app.use(cookieParser());
 
 app.use(express.json());
